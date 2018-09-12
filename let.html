@@ -35,8 +35,15 @@
     // let a = 40;//'a' has already been declared
 
 /*********************************************/
-    let a = 30;
-    console.log(window.a)//undefined
+    // let a = 30;
+    // console.log(window.a)//undefined
+/*********************************************/
+    let a = 60;
+    function getA(){
+        console.log(a);//a is not defined
+        let a = 100;
+    }
+    getA();
 
 </script>
 </html>
