@@ -49,11 +49,26 @@
     //     })(i)
     // }
     //或者，使用let声明变量i
-    for(let i = 0;i<oli.length;i++){
-        oli[i].onclick=function(){
-            console.log(i)
+    // for(let i = 0;i<oli.length;i++){
+    //     oli[i].onclick=function(){
+    //         console.log(i)
+    //     }
+    // }
+/*******************************************/
+
+        // for(let i=0;i<3;i++){
+        //     let i="abc";
+        //     console.log(i)//abc
+        // }
+/*******************************************/
+    {
+        let a = 40;
+        {
+            let a = 50;
+            console.log("我是子作用域:",a)//我是子作用域: 50
         }
+        console.log("我是父作用域:",a)//我是父作用域: 40
     }
-    
+
 </script>
 </html>
