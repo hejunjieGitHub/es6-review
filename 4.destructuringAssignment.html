@@ -105,10 +105,16 @@
     //     console.log(x,y)
     // }
     // getA()//1 2
-
-    function getA({x=9,y=10}={x:1,y:2}){
-        console.log(x,y)
+/**************************************/
+    // function getA({x=9,y=10}={x:1,y:2}){
+    //     console.log(x,y)
+    // }
+    // getA({})//1 2
+/**************************************/
+    const getA = ({x,y}) => {
+        console.log(x,y);
     }
-    getA({})//1 2
+    get();//报错
+/**************************************/
 </script>
 </html>
