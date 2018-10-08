@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/******************************/
+    // let obj = {
+    //     fn(){
+    //         console.log("我是一个函数")
+    //     }
+    // }
+    // obj.fn();
+/******************************/
+    // console.log(-0 === +0); //true
+/******************************/
+    // let res = Object.is(NaN,NaN);
+    // console.log(res);//true
+    // res = Object.is(-0,+0);
+    // console.log(res);//false
+/******************************/
+    // let obj = {
+    //     height:168
+    // }
+    // Object.defineProperty(obj,"age",{
+    //     value:23,
+    //     enumerable:true
+    // })
+    // let res = Object.assign({name:"贺俊杰"},obj)
+    // console.log(res)//{name: "贺俊杰", height: 168, age: 23}
+/******************************/
+    // let obj = {
+    //     name:"贺俊杰",
+    //     age:23
+    // }
+    // console.log(Object.getOwnPropertyNames(obj))//["name", "age"]
+    // Object.defineProperty(obj,"age",{
+    //     enumerable:false
+    // })
+    // console.log(Object.getOwnPropertyNames(obj));//["name", "age"]
+    // for(let p in obj) {
+    //     console.log(p) //name
+    // }
+/******************************/
+    // let obj = {
+    //     _name:"贺俊杰",
+    //     get name(){
+    //         console.log("获取数据属性值...")
+    //         return this._name
+    //     },
+    //     set name(val){
+    //         console.log("设置数据属性的值...")
+    //         this._name = val;
+    //     }
+    // }
+    // console.log(obj.name);//贺俊杰
+    // obj.name = "小叮当"; //设置数据属性的值...
+    // console.log(obj.name)//小叮当
+    // console.log(obj._name)//小叮当
+/******************************/
+    // let ary1 = [1,2,3,4,5];
+    // let ary2 = Object.assign([],ary1);
+    // console.log(ary2);//[1, 2, 3, 4, 5]
+    // ary1.push(55);
+    // console.log(ary1);//[1, 2, 3, 4, 5, 55]
+    // console.log(ary2);//[1, 2, 3, 4, 5]
+/******************************/
+    let {x,y,...z} = {x:1,y:4,a:12,b:23,c:34,z:45}
+    console.log(z);//{a: 12, b: 23, c: 34, z: 45}
+/******************************/
+</script>
+</html>
