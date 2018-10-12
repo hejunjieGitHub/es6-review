@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/******************************/
+    // function People(){
+    //     console.log(`ES5`)
+    // }
+
+    // class PP {
+    //     constructor(){
+    //         console.log(`ES6`)
+    //     }
+    // }
+    // People();
+    // PP(); //报错
+/******************************/
+    // let obj = {
+    //     name:"贺俊杰"
+    // }
+    // class People {
+    //     constructor(){
+    //         this.name = 23
+    //         return obj
+    //     }
+    // }
+    // let p = new People();
+    // console.log(p)//{name: "贺俊杰"}
+
+    // function CreatePeople () {
+    //     this.age = 32;
+    //     return obj;
+    // }
+    // let cp = new CreatePeople();
+    // console.log(cp)//{name: "贺俊杰"}
+
+/******************************/
+    // class People {
+
+    // }
+    // console.log(typeof People) // function
+/******************************/
+    // class People {
+
+    // }
+    // console.log(People == People.prototype.constructor) //true
+/******************************/
+    // let p = new class{
+    //     constructor(name){
+    //         this.name = name;
+    //     }
+    // }("贺俊杰")
+    // console.log(p)//{name: "贺俊杰"}
+/******************************/
+    // let bar = Symbol("bar");
+    // let name = Symbol("name");
+    // let fn = Symbol("fn");
+    // let p = new class{
+    //     constructor(bar,n){
+    //         //封装私有变量
+    //         this[bar] = bar;
+    //         this[name] = n
+    //     }
+    //     [fn](){
+    //         return "我是私有方法"
+    //     }
+    //     getName(){
+    //         return this[name]
+    //     }
+    //     execFn(){
+    //         return this[fn]
+    //     }
+    // }("bar","贺俊杰")
+    // console.log(p.getName());//贺俊杰
+    // console.log(p.execFn()())//我是私有方法
+    // console.log(p[name]);//贺俊杰 将Symbol定义在一个模块中，导入进来使用，以此实现私有变量的功能
+/******************************/
+    // function People(){
+    //     this.name = "贺俊杰"
+    // }
+    // People.showInfo = function(){
+    //     return "显示个人信息"
+    // }
+    // let p = new People();
+    // console.log(People.showInfo())//显示个人信息
+    // console.log(p.showInfo()) //报错  p.showInfo is not a function
+/******************************/
+    // class People {
+    //     static showInfo(){
+    //         return "这是个人信息..."
+    //     }
+    // }
+    // let p = new People();
+    // console.log(People.showInfo());//这是个人信息...
+    // console.log(p.showInfo)//undefined
+    // class Son extends People {
+    //     static getInfo(){
+    //         return super.showInfo()
+    //     }
+    // }
+    // console.log(Son.getInfo())//这是个人信息...
+/******************************/
+    // let name = "abc"
+    // let opt = "get"
+    // let p = new class People {
+    //     [opt+name](){
+    //         return "贺俊杰"
+    //     }
+    // }()
+    // console.log(p[opt+name]())//贺俊杰
+    // console.log(p.getabc())//贺俊杰
+/******************************/
+    class People{
+        constructor(){
+            this.newAge = 12;
+        }
+        
+        get age(){
+            return 23;
+        }
+        set age(value){
+            if(value>18&&value<=25){
+                this.newAge = value
+            }
+            else{
+                alert()
+            }
+        }
+    }
+    let p = new People();
+    console.log(p.age);
+    p.age = 23;
+    console.log(p.newAge)
+/******************************/
+</script>
+</html>

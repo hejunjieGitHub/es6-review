@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*********************************************/
+    // console.log(a); //undefined
+    // var a = 30;
+    // console.log(fn()) //30
+    // function fn(){
+    //     return a;
+    // }
+
+/*********************************************/
+    // console.log(a); //undefined
+    // console.log(fn()) //undefined
+    // var a = 30;
+    // function fn(){
+    //     return a;
+    // }
+
+/*********************************************/
+    // console.log(a);//报错
+    // let a = 30
+
+/*********************************************/
+    // let a = 30
+    // let a = 40;//'a' has already been declared
+
+/*********************************************/
+    // let a = 30;
+    // console.log(window.a)//undefined
+/*********************************************/
+    let a = 60;
+    function getA(){
+        console.log(a);//a is not defined
+        let a = 100;
+    }
+    getA();
+
+</script>
+</html>

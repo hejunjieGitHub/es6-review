@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*********************************************/   
+    // function * gen() {
+    //     let a = 30;
+    //     console.log(a)
+    //     yield a+50;
+    //     yield "贺俊杰";
+    //     return 23
+    // }
+    // let g = gen();
+    // console.log(g.next());//{value: 80, done: false}
+    // console.log(g.next());//{value: "贺俊杰", done: false}
+    // console.log(g.next());//{value: 23, done: true}
+    // console.log(g.next());//{value: undefined, done: true}
+/*********************************************/
+    // function * gen() {
+    //     yield "hello";
+    //     yield "world";
+    //     return "贺俊杰"
+    // }
+    // let g = gen();//返回一个遍历器对象
+    // for (const item of g) {
+    //     console.log(item)
+    // }
+/*********************************************/
+    // function * gen() {
+    //     yield "hello";
+    //     yield "world";
+    //     return "贺俊杰"
+    // }
+    // let g = gen();
+    // const [...arg] = g; //或者  console.log([...g])
+    // console.log(arg) //["hello", "world"]
+/*********************************************/
+    // function * gen() {
+    //     yield "hello";
+    //     yield "world";
+    //     return "贺俊杰"
+    // }
+    // const arr = Array.from(g);
+    // console.log(arr) //["hello", "world"]
+/*********************************************/
+    // function * gen() {
+    //     const data = yield 1+6;
+    //     console.log(data)
+    // }
+    // let g = gen();
+    // let val = g.next().value;
+    // g.next(val)
+/*********************************************/
+// const getRequest = () => {
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//              let data = {
+//                 code:0,
+//                 data:[],
+//                 msg:"请求成功"
+//             };
+//             resolve(data)
+//         },3000)
+//     })
+// }
+    
+//     function * gen() {
+//         yield "开启loading";
+//         const data = yield getRequest();
+//         console.log(data)
+//         yield "关闭loading"
+//     }
+//     let g = gen();
+//     g.next();
+//     g.next().value.then(res=>{
+//         g.next(res);
+//         g.next();
+//     })
+/*********************************************/
+</script>
+</html>

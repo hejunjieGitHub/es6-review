@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*********************************************/   
+    // let obj = new Proxy({},{
+    //     get(target,property){
+    //         return 32
+    //     }
+    // })
+    // let res = obj.age;
+    // console.log(res) //32
+/*********************************************/  
+    // let obj = {
+    //     name:"贺俊杰"
+    // }
+    // let proxy = new Proxy(obj,{});
+    // proxy.age = 23;
+    // console.log(obj)//{name: "贺俊杰", age: 23}
+/*********************************************/    
+    // let obj = {
+    //     name:"贺俊杰",
+    //     age:23
+    // }
+    // let proxy = new Proxy(obj,{
+    //     get(target,key,proxy){
+    //         //{name: "贺俊杰", age: 23} "name" Proxy {name: "贺俊杰", age: 23}
+    //         console.log(target,key,proxy) 
+    //     }
+    // })
+    // proxy.name 
+/*********************************************/  
+    // let obj = {
+    //     name:"贺俊杰",
+    //     age:23
+    // }
+    // let proxy = new Proxy(obj,{
+    //     get(target,key,proxy){
+    //         return target[key]
+    //     }
+    // })
+    // console.log(proxy.name) //贺俊杰 
+/*********************************************/    
+    // let obj = {
+    //     name:"贺俊杰"
+    // }
+    // let proxy = new Proxy(obj,{
+    //     set(target,key,value,proxy){
+    //         target[key] = value
+    //     }
+    // })
+    // obj.age = 23;
+    // console.log(obj) //{name: "贺俊杰", age: 23}
+/*********************************************/  
+    // let obj = {
+
+    // }
+    // let newObj = new Proxy(obj,{
+
+    // })
+/*********************************************/  
+    // let newProxy = new Proxy({},{
+    //     get(target,property){
+    //         console.log(target,property) //{} "getName"
+    //     }
+    // })
+    // newProxy.getName("贺俊杰");//报错
+/*********************************************/  
+    let Dom = new Proxy({},{
+        get(target,property){
+            return function(attr={},...child){
+                const ele = document.createElement(property);
+                for (const [k,v] of Object.entries(attr)) {
+                    ele.setAttribute(k,v)
+                }
+                for (const item of child.values()) {
+                    let content = null
+                    if(typeof item == "string"){
+                        content = document.createTextNode(item)
+                    }
+                    else{
+                        content = item;
+                    }
+                    ele.appendChild(content)
+                }
+                return ele;
+            }
+        }
+    })
+    let div = Dom.div({id:"box",class:"boxname"},"我是一个box","我是一个代理器",
+        Dom.a({
+                href:"http://www.baidu.com",
+                target:"_blank"
+            },
+            "百度一下"
+    ));
+    document.body.appendChild(div) 
+    // console.log(div)
+/*********************************************/ 
+    // let obj = {
+    //     a:1,
+    //     b:2
+    // }
+    // let proxy = new Proxy(obj,{
+    //     deleteProperty(target,property){
+    //         delete target[property]
+    //     }
+    // })
+    // delete proxy.b;
+    // console.log(obj) //{a: 1}
+    // console.log(proxy) //Proxy {a: 1}
+/*********************************************/    
+    // let obj = {
+    //     a:1,
+    //     b:3
+    // }
+    // let proxy = new Proxy(obj,{
+    //     has(target,property){
+    //         console.log(property in target)
+    //         return property in target
+    //     }
+    // })
+    // "b" in proxy; //true
+    // "num" in proxy; //false
+/*********************************************/    
+    function getName(name){
+        return name
+    }
+    let proxy = new Proxy(getName,{
+        apply(target,context,args){
+            // return `触发apply${target(...args)}` //通行不了
+            return Reflect.apply(...arguments)
+        }
+    })
+    console.log(proxy("贺俊杰")) //"贺俊杰"
+/*********************************************/    
+</script>
+</html>

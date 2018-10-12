@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/******************************/
+    // function getA (x,y) {
+    //     x = x||"default";
+    //     y = y||"default";
+    //     console.log(x,y)
+    // }   
+    // getA(0,"a")
+/******************************/
+    // function getA(x,y=10) {
+    //     return x + y;
+    // }
+    // console.log(getA(3,false)); //3
+/******************************/
+    // function getA(a,b,c) {
+
+    // }
+    // console.log(getA.length) //3
+/******************************/
+    // function getA(a,b,c=30) {
+
+    // }
+    // console.log(getA.length) //2
+/******************************/
+    // function getA(a,b=5,c) {
+
+    // }
+    // console.log(getA.length) //1
+/******************************/
+    // function getA(a,...b,c) {
+
+    // }
+    // console.log(getA.length) //报错 Rest parameter must be last formal parameter
+/******************************/
+    // function getA(...a) {
+    //     console.log(a);
+    // }
+    // getA(1,2,3);//[1, 2, 3]
+/******************************/
+    // let getA = function() {
+
+    // }
+    // console.log(getA.name)//getA
+/******************************/
+    // const fn = () => {
+
+    // }
+    // console.log(fn.name)//fn
+/******************************/
+    // let name = (function(){
+
+    // }).name;
+    // console.log(name)//""
+/******************************/
+    // const fn = () => {
+
+    // }
+    // let f = fn.bind(null);
+    // console.log(f.name)//bound fn
+/******************************/  
+    // let name = (function (){
+
+    // }.bind(null)).name;
+    // console.log(name)//bound
+/******************************/  
+    // let fn = new Function("x","y","return x+y");
+    // console.log(fn(5,50));//55
+/******************************/  
+    // let fn = new Function("x,y","return x+y"); //接收两个参数
+    // console.log(fn(5,50));//55
+/******************************/  
+    // let x = 50;
+    // let f = new Function("return x");
+    // console.log(f());//50
+/******************************/  
+    // let x = 10;
+    // const fn = (a=b,b) => {
+    //     console.log(a,b)
+    // }
+    // fn(undefined,500); //报错 b is not defined
+/******************************/  
+    // let x = 10;
+    // const fn = (a,b=a) => {
+    //     console.log(a,b)
+    // }
+    // fn(500); //500 500
+/******************************/ 
+    // let x = 10;
+    // const fn = (a,b=x) => {
+    //     console.log(a,b)
+    // }
+    // fn(500); //500 10
+/******************************/ 
+    // let x = 10;
+    // function fn(x,y=x){
+    //     return x+y;
+    // }
+    // console.log(fn(50));//100
+    // //代码解释：
+    // function getX(x,y) {
+    //     x = x;
+    //     y = y||x;
+    //     return x+y
+    // }
+/******************************/  
+    // let obj = {
+    //     fn:()=>{
+    //         console.log(this);
+    //     }
+    // }
+    // console.log(obj.fn()) //window
+/******************************/  
+    // let obj = {
+    //     show:function(){
+    //         (()=>{
+    //             console.log(this)
+    //         })()
+    //     }
+    // }
+    // console.log(obj.show()) //obj
+/******************************/  
+    // function getX (x) {
+    //     let x = 20;
+    //     return x;
+    // }
+    // getX();//报错 'x' has already been declared
+/******************************/  
+    function getX (x) {
+        var x = 20;
+        return x;
+    }
+    getX();//20
+/******************************/  
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*********************************************/
+    // let m = new Map([["a",1],["b",2],["c",3]]);
+    // console.log(m)
+/*********************************************/
+    // let m = new Map([[{a:1},{name:"贺俊杰"}],[[1,2,3],['a','b','c']],[false,()=>"hello world"]]);
+    // console.log(m)
+/*********************************************/
+    // let obj = {a:1};
+    // let arr = [1,2,3];
+    // let m = new Map([[obj,{name:"贺俊杰"}],[[1,2,3],['a','b','c']],[false,()=>"hello world"]]);
+    // console.log(m)
+    // let o = m.get(obj);
+    // console.log(o)//{name: "贺俊杰"}
+    // let ar = m.get(arr);
+    // console.log(ar)//undefined
+    // let fn = m.get(false);
+    // console.log(fn())//hello world
+/*********************************************/
+    // let m = new Map()
+    // m.set(1,"hello").set(2," world");
+    // console.log(m.get(1)+m.get(2))//hello world
+/*********************************************/
+    // let m = new Map([[1,2],[true,"hello"]]);
+    // for (const item of m) {
+    //     console.log(item) //[1, 2]  [true, "hello"]
+    // }
+    // m.forEach((item,key,m)=>console.log(item,key,m))//2 1 Map(2) {1 => 2, true => "hello"}  
+    // //hello true Map(2) {1 => 2, true => "hello"}
+/*********************************************/
+    // let m = new Map([[true,23]]);
+    // console.log(m.keys())
+/*********************************************/
+    // let m = new Map();
+    // let arr = [1,2,3,4];
+    // for (const [k,v] of arr.entries()) {
+    //     m.set(k,v)
+    // }
+    // console.log(m)//Map(4) {0 => 1, 1 => 2, 2 => 3, 3 => 4}
+/*********************************************/
+    let m = new Map([[true,123],[{a:1},false]]);
+    let arr = Array.from(m);
+    console.log(arr)
+/*********************************************/
+</script>
+</html>

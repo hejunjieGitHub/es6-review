@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*********************************************/
+    // async function getA(){
+    //     return "贺俊杰"
+    // }
+    // getA().then(res=>{
+    //     console.log(res) //贺俊杰
+    // }).catch(e=>console.log(e))
+/*********************************************/
+    // async function getA(){
+    //     throw new Error("出错了...")
+    //     return "贺俊杰"
+    // }
+    // getA().then(res=>{
+    //     console.log(res)
+    // }).catch(e=>console.log(e)) //输出错误信息
+/*********************************************/
+    // const fn = async () => {
+    //     console.log("执行1");
+    //     let data = await "执行2"
+    //     console.log(data)
+    // }
+    // fn();
+/*********************************************/
+    // const getRequest = () => {
+    //     return new Promise((resolve) => {
+    //         setTimeout(()=>{
+    //             let data = {
+    //                 code:0,
+    //                 data:[],
+    //                 msg:"请求成功"
+    //             };
+    //             resolve(data)
+    //         },3000)
+    //     })
+    // }
+    
+    // const fn = async () => {
+    //     console.log("开启loading...");
+    //     const data = await getRequest();
+    //     if(data.code == 0){
+    //         return "请求成功"
+    //     }
+    //     else{
+    //         return data.msg
+    //     }
+    // }
+    // fn().then(res=>console.log(res)).catch(e=>console.log(e))
+/*********************************************/
+    // const getRequest = () => {
+    //     return new Promise((resolve,reject) => {
+    //         setTimeout(()=>{
+    //             let data = {
+    //                 code:0,
+    //                 data:[],
+    //                 msg:"请求成功"
+    //             };
+    //             reject(data)
+    //         },3000)
+    //     })
+    // }
+    
+    // const fn = async () => {
+    //     console.log("开启loading...");
+    //     const data = await getRequest();
+    //     if(data.code == 0){
+    //         return "请求成功"
+    //     }
+    //     else{
+    //         return data.msg
+    //     }
+    // }
+    // fn().then(res=>console.log(res))
+    // .catch(e=>console.log(e))
+/*********************************************/
+    // const fn = async () => {
+    //     await Promise.reject("出错了...")
+    // }
+    // fn().catch(e=>console.log(e)) //出错了...
+/*********************************************/
+    // const fn = async () => {
+    //     await Promise.reject("出错了...").catch(e=>{return e})
+    //     return "hello world!"
+    // }
+    // fn().catch(e=>console.log(e)).then(res=>console.log(res)) //hello world
+/*********************************************/
+    // const fn = async () => {
+    //     try{
+    //         await Promise.reject("出错了...")
+    //     }catch(e) {
+
+    //     }
+    //     return "hello world!"
+    // }
+    // fn().catch(e=>console.log(e)).then(res=>console.log(res)) //hello world
+/*********************************************/
+    const fn = async () => {
+        return Promise.resolve("返回一个Promise对象")
+    }
+    fn().then(res=>console.log(res)) //返回一个Promise对象
+/*********************************************/
+</script>
+</html>

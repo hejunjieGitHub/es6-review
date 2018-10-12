@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/**************************************/
+    // let [x,y,z] = [1,2,3,4,5];
+    // console.log(x,y,z)//1 2 3
+/**************************************/
+    // let [x,y,z] = [1,2];
+    // console.log(x,y,z)//1 2 undefined
+/**************************************/
+    // let [x,y,z=3] = [1,2];
+    // console.log(x,y,z);//1 2 3
+    // [x,y,z] = [1,2,undefined];
+    // console.log(x,y,z);//1 2 undefined
+    // [x,y,z=(()=>{console.log("执行默认...");return 200})()] = [1,2,3];
+    // console.log(x,y,z);//1 2 3
+    // [x,y,z=(()=>{console.log("执行默认...");return 200})()] = [1,2];//执行默认...
+    // console.log(x,y,z);//1 2 200
+    // [x,y,z=(()=>{console.log("执行默认...");return 200})()] = [1,2,undefined];//执行默认...
+    // console.log(x,y,z);//1 2 200
+    // [x,y,z=(()=>{console.log("执行默认...");return 200})()] = [1,2,null];
+    // console.log(x,y,z);//1 2 null
+/**************************************/
+    // let [,,z] = [1,2,3];
+    // console.log(z)//3
+/**************************************/
+    // let [x,y,...z] = [1,2,3,4,5,6];
+    // console.log(z)//[3, 4, 5, 6]
+/**************************************/
+    // let {age:age,name:name} = {name:"贺俊杰",age:24};
+    // console.log(name,age);//贺俊杰 24
+/**************************************/
+    // let {name,age} = {name:"贺俊杰",age:23};
+    // console.log(name,age);//贺俊杰 23
+/**************************************/
+    // let {name,age=23} = {name:"贺俊杰",age:undefined}
+    // console.log(name,age)//贺俊杰 23
+/**************************************/
+    // let x,y;
+    // // ({x,y}) = {x:1,y:2};//报错，Unexpected token (
+    // // ({x,y}) = ({x:1,y:2});//报错，Unexpected token (
+    // ({x,y} = {x:1,y:2})//1 2 
+/**************************************/
+    // let {x,y,list:[a,b,c]} = {x:1,y:2,list:[7,8,9]}
+    // console.log(a,b,c)//7 8 9
+    // console.log(list)//报错 list is not defined
+    // //因为list 是模式
+/**************************************/
+    // let [x,y] = "123456";
+    // console.log(x,y)//1 2
+    // [x,y] = 12345;//报错
+    // console.log(x,y)
+/**************************************/
+    // let value = Object(123);
+    // console.log(value)
+/**************************************/
+    // let {a} = 1;
+    // console.log(a)//undefined
+    // let {__proto__:a} = 10;
+    // console.log(a);//取得Object(10)的原型
+/**************************************/
+    // let {length:str} = "hello world";
+    // console.log(str);//11
+/**************************************/
+    // function getA([x,y,z]){
+    //     console.log(x,y,z)
+    // }
+    // getA([1,2,3]) //1,2,3
+/**************************************/
+    // function getA([x,y,z=56]){
+    //     console.log(x,y,z)
+    // }
+    // getA() //报错
+/**************************************/
+    // function getA([x,y,z=56]=[1,2,6]){
+    //     console.log(x,y,z)
+    // }
+    // getA() //1 2 6
+/**************************************/
+    // function getA([x,y,z=56]=[1,2,6]){
+    //     console.log(x,y,z)
+    // }
+    // getA([]) //undefined undefined 56
+/**************************************/
+    // function getA({x,y}){
+    //     console.log(x,y)
+    // }
+    // getA({x:1,y:2})//1 2 
+/**************************************/
+    // function getA({x,y}){
+    //     console.log(x,y)
+    // }
+    // getA()//报错
+/**************************************/
+    // function getA({x,y}={x:1,y:2}){
+    //     console.log(x,y)
+    // }
+    // getA()//1 2
+/**************************************/
+    // function getA({x=9,y=10}={x:1,y:2}){
+    //     console.log(x,y)
+    // }
+    // getA({})//1 2
+/**************************************/
+    const getA = ({x,y}) => {
+        console.log(x,y);
+    }
+    get();//报错
+/**************************************/
+</script>
+</html>
