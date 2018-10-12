@@ -70,10 +70,6 @@
 "use strict";
 
 
-var _dec, _class;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 // let a = "hello world";
 // console.log(a);
 
@@ -108,25 +104,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // let p1 = new People();
 // console.log(p1.isShow)
 /**************************************** */
-function mixins() {
-    for (var _len = arguments.length, list = Array(_len), _key = 0; _key < _len; _key++) {
-        list[_key] = arguments[_key];
-    }
+// function mixins(...list){
+//     return function(target){
+//         Object.assign(target.prototype,...list)
+//     }
+// }
+// let obj = {
+//     name:"贺俊杰",
+//     age:24
+// }
+// @mixins(obj)
+// class People{
 
-    return function (target) {
-        Object.assign.apply(Object, [target.prototype].concat(list));
-    };
-}
-var obj = {
-    name: "贺俊杰",
-    age: 24
-};
-var People = (_dec = mixins(obj), _dec(_class = function People() {
-    _classCallCheck(this, People);
-}) || _class);
-
-var p1 = new People();
-console.log(p1);
+// }
+// let p1 = new People();
+// console.log(p1)
+/**************************************** */
+var s = 3.0;
+console.log(Number.isInteger(s));
+/**************************************** */
 
 /***/ })
 /******/ ]);

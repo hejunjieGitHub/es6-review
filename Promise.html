@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*********************************************/   
+    // console.log("执行1....☺")
+    // let p = new Promise((resolved,rejected)=>{
+    //     console.log("执行2....√")
+    //     rejected("执行失败....×")
+    //     resolved("执行成功....\(^o^)/~")
+    //     console.log("执行到这里了....❤")
+    // })
+    // console.log("执行3....☆")
+    // p.then(val=>console.log(val),e=>console.log(e))
+    // console.log("执行4....(*^▽^*)")
+/*********************************************/   
+    // console.log("执行1....☺")
+    // let p = new Promise((resolved,rejected)=>{
+    //     console.log("执行2....√")
+    //     let a = 3;
+    //     let a = 5; //报错
+    //     rejected("执行失败....×")
+    //     resolved("执行成功....\(^o^)/~")
+    //     console.log("执行到这里了....❤")
+    // })
+    // console.log("执行3....☆")
+    // p.then(val=>console.log(val),e=>console.log(e))
+    // console.log("执行4....(*^▽^*)")
+/*********************************************/   
+    // console.log("执行1....☺")
+    // let p = new Promise((resolved,rejected)=>{
+    //     console.log("执行2....√")
+    //     let a = 3;
+    //     let a = 5; //报错
+    //     resolved("执行成功....\(^o^)/~")
+    //     console.log("执行到这里了....❤")
+    // })
+    // console.log("执行3....☆")
+    // p.then(val=>console.log(val),e=>console.log(e))
+    // console.log("执行4....(*^▽^*)")
+/*********************************************/   
+    // console.log("执行1....☺")
+    // let p = new Promise((resolved,rejected)=>{
+    //     console.log("执行2....√")
+    //     resolved("执行成功....\(^o^)/~")
+    //     console.log("执行到这里了....❤")
+    // })
+    // console.log("执行3....☆")
+    // p.then(val=>{
+    //     console.log(val);
+    //     let a = 3;
+    //     let a = 3;//报错
+    // },e=>console.log(e))
+    // console.log("执行4....(*^▽^*)")
+/*********************************************/  
+    // console.log("执行1....☺")
+    // let p = new Promise((resolved,rejected)=>{
+    //     console.log("执行2....√")
+    //     resolved("执行成功....\(^o^)/~")
+    //     console.log("执行到这里了....❤")
+    // })
+    // console.log("执行3....☆")
+    // p.then(val=>{
+    //     console.log(val);
+    //     let a = 3;
+    //     let a = 3;//报错
+    // }).catch(e=>console.log(e))
+    // console.log("执行4....(*^▽^*)") 
+/*********************************************/  
+    // const loadImage = (url) => {
+    //     return new Promise((resolve,reject) => {
+    //         let img = new Image();
+    //         img.src = url;//如果url正确执行resolve
+    //         console.log("url:",url)
+    //         img.onload = () => {
+    //             resolve(this);
+    //         }
+    //         img.onerror = (e) => {
+    //             reject(e)
+    //         }
+    //     })
+    // }
+    // loadImage(`‪https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365329114,561357493&fm=27&gp=0.jpg`)
+    // .then((img)=>document.body.appendChild(img))
+    // .catch(e=>console.log("失败..."))
+/*********************************************/   
+    // let p1 = new Promise((resolve)=>{
+    //     console.log("p1执行成功...")
+    //     resolve("p1执行成功...")
+    // })
+    // let p2 = new Promise((resolve)=>{
+    //     console.log("p2执行成功...")
+    //     resolve("p2执行成功...")
+    // })
+    // let p3 = new Promise((resolve)=>{
+    //     console.log("p3执行成功...")
+    //     resolve("p3执行成功...")
+    // })
+    // let pall = Promise.all([p1,p2,p3])
+    // pall.then(res=>console.log(res)).catch(e=>console.log(e))
+/*********************************************/  
+    // let p1 = new Promise((resolve)=>{
+    //     console.log("p1执行成功...")
+    //     setTimeout(resolve.bind(null,"p1执行成功..."),3000)
+    // })
+    // let p2 = new Promise((resolve)=>{
+    //     console.log("p2执行成功...")
+    //     setTimeout(resolve.bind(null,"p2执行成功..."),1000)
+    // })
+    // let p3 = new Promise((resolve)=>{
+    //     console.log("p3执行成功...")
+    //     setTimeout(resolve.bind(null,"p3执行成功..."),8)
+    // })
+    // let pall = Promise.all([p1,p2,p3])
+    // pall.then(res=>console.log(res)).catch(e=>console.log(e)) 
+/*********************************************/   
+    // let p1 = new Promise((resolve)=>{
+    //     console.log("p1执行")
+    //     setTimeout(resolve.bind(null,"p1执行成功..."),3000)
+    // })
+    // let p2 = new Promise((resolve,reject)=>{
+    //     console.log("p2执行")
+    //     setTimeout(reject.bind(null,"p2执行失败..."),1000)
+    // })
+    // let p3 = new Promise((resolve)=>{
+    //     console.log("p3执行")
+    //     setTimeout(resolve.bind(null,"p3执行成功..."),8)
+    // })
+    // let pall = Promise.all([p1,p2,p3])
+    // pall.then(res=>console.log(res)).catch(e=>console.log(e)) 
+/*********************************************/ 
+    // let p1 = new Promise((resolve)=>{
+    //     console.log("p1执行")
+    //     setTimeout(resolve.bind(null,"p1执行成功..."),3000)
+    // })
+    // let p2 = new Promise((resolve,reject)=>{
+    //     console.log("p2执行")
+    //     setTimeout(reject.bind(null,"p2执行失败..."),1000)
+    // })
+    // let p3 = new Promise((resolve)=>{
+    //     console.log("p3执行")
+    //     setTimeout(resolve.bind(null,"p3执行成功..."),8000)
+    // })
+    // let pall = Promise.race([p1,p2,p3])
+    // pall.then(res=>console.log(res)).catch(e=>console.log(e)) 
+/*********************************************/   
+    // let p = Promise.resolve("我叫贺俊杰");
+    // p.then(res => console.log(res)) //我叫贺俊杰
+/*********************************************/   
+    // let p = Promise.reject("程序出问题了...");
+    // p.catch(e=>console.log(e)) //程序出问题了...
+/*********************************************/  
+    // let p = new Promise(resolve => {
+    //     setTimeout(()=>{
+    //         resolve("这是数据")
+    //     },3000)
+    // }).then(res=>{
+    //     console.log(res)
+    //     return `第二个then调用：${res}`
+    // }).then(res=>{
+    //     console.log(`上一个的防水结果${res}`)
+    // }).catch(e=>console.log(e))
+/*********************************************/   
+    let p = new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve("请求成功...")
+        },3000)
+    }).then(res=>{
+        console.log(res);
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve("第二个请求成功...")
+            },5000)
+        })
+    }).then(res=>{
+        console.log(res);
+    }).catch(e=>console.log(e))
+/*********************************************/   
+</script>
+</html>
